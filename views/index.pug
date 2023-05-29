@@ -1,5 +1,16 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  header 
+    h1= title
+    p= 'Welcome!'
+  div(class='message-container')
+    each obj, index in messages
+      div(class=`msg-${index}`)
+        h2= `User: ${obj.user}`
+        p= `Message: ${obj.text}`
+        p= `Date created: ${obj.added}`
+        
+
+    
+
