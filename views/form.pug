@@ -1,0 +1,11 @@
+extends layout 
+
+block content
+    form(action="/new", method="post")
+        h1= 'Add new post'
+        label(for="authors name") Name
+            input(type='text' name='name')
+        label(for="authors message") Message
+            input(type='text' name='message')
+        button(type="submit") Submit
+
